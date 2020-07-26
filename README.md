@@ -1,4 +1,4 @@
-### Problem Solving
+### Problem-Solving
 > Created Date : 2020-07-24, Last Update : 2020-07-27<br>
 > Writer : Nemo (nemo-algorithm AT korea.ac.kr)
 
