@@ -3,11 +3,11 @@ struct LCA {
      G는 1부터 넘버링한 트리이며
      간선의 첫 번째 인자는 도착지, 두번째 인자는 가중치를 의미한다.
 
-     LCA(G)를 통해 O(NlgN)에 초기화하며
+     LCA(G)를 통해 O(n lg n)에 초기화하며
      이후 아래의 함수를 사용 가능하다.
 
      pair<int, ll> query(int a, int b)
-     : O(lg N) {LCA, a부터 b까지의 거리}를 반환한다.
+     : O(lg n) {LCA, a부터 b까지의 거리}를 반환한다.
 
      make_sparse_table에서 parent를 업데이트하는 부분과
      query에서 ret를 갱신하는 부분을 수정하면
