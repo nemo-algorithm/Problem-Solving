@@ -18,20 +18,20 @@ struct SEG{
     */
     SEG(int n) : n(n) {
         tn = 1;
-        while(tn<n) tn *= 2;
+        while(tn < n) tn *= 2;
         req.resize(tn * 2);
         for(int i=1; i<2*tn; i++) req[i] = 0;
     }
     int n, tn;
     vector<int> req;
-    void update(int s, ll d){ //s에 d넣기
+    void update(int s, ll d) { //s에 d넣기
         int i = tn + s - 1;
         req[i] = d;
-        for(i/=2; i>=1; i/=2){
+        for(i/=2; i>=1; i/=2) {
             req[i] = req[i*2] + req[i*2+1];
         }
     }
-    ll query(int l, int r){
+    ll query(int l, int r) {
         int ret = 0;
         l += tn - 1; r += tn - 1;
         for(;l<r;l/=2, r/=2){
@@ -41,14 +41,14 @@ struct SEG{
         if(l==r) ret += req[l];
         return ret;
     }
-    int lower_bound(ll a){
-        int ret=n,l=1,r=n,mid;
+    int lower_bound(ll a) {
+        int ret = n, l = 1, r = n, mid;
         ll p;
-        while(l<=r){
-            mid=(l+r)/2;
-            p=query(1,1,mid);
-            if(p>=a) ret=min(ret,mid),r=mid-1;
-            else l=mid+1;
+        while(l <= r){
+            mid = (l + r) / 2;
+            p = query(1, 1, mid);
+            if(p >= a) ret = min(ret, mid), r = mid - 1;
+            else l = mid + 1;
         }
         return ret;
     }
