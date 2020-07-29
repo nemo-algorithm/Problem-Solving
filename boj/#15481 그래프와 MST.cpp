@@ -127,7 +127,7 @@ int main() {
     for(int i=0; i<M; i++) {
         int isMST=0;
         int a=get<0>(E[i]), b=get<1>(E[i]); ll c=get<2>(E[i]);
-        for(pair<int, ll> j : mst.mst[a]) {
+        for(pair<int, ll> j: mst.mst[a]) {
             if(j.first == b && j.second == c) isMST = 1;
         }
         if(isMST) cout<<mst.sum<<'\n';
