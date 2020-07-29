@@ -77,8 +77,7 @@ struct LCA {
                 a = par[a][i].first, b = par[b][i].first;
         return {par[a][0].first, max(ret, max(f(a, 0, c), f(b, 0, c)))};
     }
-}
-        lca(vector<vector<pair<int, ll>>>(0));
+} lca(vector<vector<pair<int, ll>>>(0));
 struct MST {
     explicit MST(const vector<vector<pair<int, ll>>>& G) : G(G) {
             for(int i=1; i<G.size(); i++) {
