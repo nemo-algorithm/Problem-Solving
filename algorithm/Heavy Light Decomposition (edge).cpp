@@ -3,7 +3,7 @@ struct HLD{ //edge
      edge 기준으로 HLD query를 수행한다.
      트리의 정점은 1부터 시작하도록 넣어주어야 하며, pair<int, int> 형식을 통해 간선 가중치 정보를 포함해야 한다.
      Segment Tree 구조체와 함께 선언되어야 하며
-     HLD(G)를 통해 O(N)에 초기화하면
+     HLD(G)를 통해 O(n)에 초기화하면
      이후 아래의 두 함수를 사용 가능하다.
 
      void update(int a, int s, int d)

@@ -3,7 +3,7 @@ struct HLD{ //vertex
      vertex 기준으로 HLD query를 수행한다.
      트리의 정점은 1부터 시작하도록 넣어주어야 한다.
      Segment Tree 구조체와 함께 선언되어야 하며
-     HLD(G)를 통해 O(N)에 초기화하면
+     HLD(G)를 통해 O(n)에 초기화하면
      이후 아래의 두 함수를 사용 가능하다.
 
      void update(int a)
