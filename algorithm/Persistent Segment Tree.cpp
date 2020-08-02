@@ -26,7 +26,7 @@ struct PST {
         int left_node = 0, right_node = 0; ll req = 0;
     };
     vector<int> root;
-    vector <node> seg;
+    vector<node> seg;
     void update(int bef, int a, ll l, ll r, ll s, ll d) {
         if (a == 0) return;
         if (s <= l && r <= s) seg[a].req = d;
